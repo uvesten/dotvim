@@ -30,8 +30,9 @@ augroup END
 " Run node on current file
 command Nvm !node %
 
-" For use with vim-pipe
+" Map localleader and leader to something that works.
 let maplocalleader = ";"
+let mapleader = ","
 
 nmap <F8> :TagbarToggle<CR>
 
