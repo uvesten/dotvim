@@ -39,3 +39,11 @@ nmap <F8> :TagbarToggle<CR>
 let g:NERDTreeDirArrows=0
 nmap <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" For vim-slime, testing to use tmux instead of screen. 
+let g:slime_target = "tmux"
+
+" jshint2 integration
+nnoremap <silent><F3> :JSHint<CR>
+inoremap <silent><F3> <C-O>:JSHint<CR>
+vnoremap <silent><F3> :JSHint<CR>
