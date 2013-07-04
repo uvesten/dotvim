@@ -24,7 +24,7 @@ colorscheme solarized
 
 " Octave syntax 
 augroup filetypedetect 
-  au! BufRead,BufNewFile *.m,*.oct set filetype=octave 
+    au! BufRead,BufNewFile *.m,*.oct set filetype=octave 
 augroup END
 
 " Run node on current file
@@ -47,3 +47,7 @@ let g:slime_target = "tmux"
 nnoremap <silent><F3> :JSHint<CR>
 inoremap <silent><F3> <C-O>:JSHint<CR>
 vnoremap <silent><F3> :JSHint<CR>
+
+"closetag for html editing etc. 
+autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
