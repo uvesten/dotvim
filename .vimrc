@@ -51,3 +51,19 @@ vnoremap <silent><F3> :JSHint<CR>
 "closetag for html editing etc. 
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
+
+
+" word wrap. 
+set wrap
+set linebreak
+set nolist  " list disables linebreak
+
+"In addition, you will need to prevent Vim from automatically inserting line
+"breaks in newly entered text. The easiest way to do this is:
+set textwidth=0
+set wrapmargin=0
+
+"If you want to keep your existing 'textwidth' settings for most lines in your
+"file, but not have Vim automatically reformat when typing on existing lines,
+"you can do this with
+" set formatoptions+=l
