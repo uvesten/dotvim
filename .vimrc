@@ -52,6 +52,8 @@ vnoremap <silent><F3> :JSHint<CR>
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
 
+" dont fold markdown
+let g:vim_markdown_folding_disabled=1
 
 " word wrap. 
 set wrap
