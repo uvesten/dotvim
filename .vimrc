@@ -5,6 +5,10 @@ filetype plugin indent on
 set gcr=a:blinkon0
 " 4 spaces = tab
 set sw=4 sts=4 et
+" for javascript
+au FileType javascript setl sw=2 sts=2 et
+
+
 " Line numbers
 set number
 
