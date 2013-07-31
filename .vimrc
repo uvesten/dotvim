@@ -1,12 +1,17 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+
+set autoindent
+set smartindent
+set expandtab
 " No blinking
 set gcr=a:blinkon0
 " 4 spaces = tab
 set sw=4 sts=4 et
 " for javascript
 au FileType javascript setl sw=2 sts=2 et
+au FileType html setl sw=2 sts=2 et
 
 
 " Line numbers
@@ -16,7 +21,6 @@ set number
 set mouse=a
 
 
-syntax enable
 
 " Choose colorscheme based on GUI. 
 if has('gui_running')
@@ -26,10 +30,16 @@ else
 endif
 colorscheme solarized
 
-" Octave syntax 
+" Some special filetypes
 augroup filetypedetect 
-    au! BufRead,BufNewFile *.m,*.oct set filetype=octave 
+    au BufRead,BufNewFile *.m,*.oct set filetype=octave 
+    au BufNewFile,BufRead *.ejs set filetype=html
 augroup END
+
+" for html indent. vim-javascript fscks something up otherwise.
+let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"
 
 " Run node on current file
 command Nvm !node %
