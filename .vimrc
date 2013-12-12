@@ -23,11 +23,11 @@ set mouse=a
 
 
 " Choose colorscheme based on GUI. 
-"if has('gui_running')
-"    set background=light
-"else
+if has('gui_running')
+    set background=light
+else
 set background=dark
-"endif
+endif
 
 colorscheme solarized
 
