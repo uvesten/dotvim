@@ -10,8 +10,8 @@ set gcr=a:blinkon0
 " 4 spaces = tab
 set sw=4 sts=4 et
 " for javascript
-au FileType javascript setl sw=2 sts=2 et
-au FileType html setl sw=2 sts=2 et
+au FileType javascript setl sw=4 sts=4 et
+au FileType html setl sw=4 sts=4 et
 
 
 " Line numbers
@@ -20,7 +20,8 @@ set number
 " Enable mouse in terminal
 set mouse=a
 
-
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
 
 " Choose colorscheme based on GUI. 
 if has('gui_running')
@@ -36,6 +37,16 @@ augroup filetypedetect
     au BufRead,BufNewFile *.m,*.oct set filetype=octave 
     au BufNewFile,BufRead *.ejs set filetype=html
 augroup END
+
+let g:mustache_abbreviations = 1
+
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+autocmd FileType handlebars noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
 
 " for html indent. vim-javascript fscks something up otherwise.
 let g:html_indent_inctags = "html,body,head,tbody"
