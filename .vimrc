@@ -95,3 +95,7 @@ set wrapmargin=0
 "file, but not have Vim automatically reformat when typing on existing lines,
 "you can do this with
 " set formatoptions+=l
+
+" for postgres development
+autocmd FileType sql :let b:vimpipe_command="psql -U reservi"
+autocmd FileType sql :let b:vimpipe_filetype="postgresql"
