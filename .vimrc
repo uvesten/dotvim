@@ -7,11 +7,11 @@ set smartindent
 set expandtab
 " No blinking
 set gcr=a:blinkon0
-" 4 spaces = tab
-set sw=4 sts=4 et
+" 2 spaces = tab
+set sw=2 sts=2 et
 " for javascript
-au FileType javascript setl sw=4 sts=4 et
-au FileType html setl sw=4 sts=4 et
+au FileType javascript setl sw=2 sts=2 et
+au FileType html setl sw=2 sts=2 et
 
 
 " Line numbers
