@@ -82,3 +82,6 @@
 [submodule "bundle/vim-postgresql-syntax"]
 	path = bundle/vim-postgresql-syntax
 	url = https://github.com/krisajenkins/vim-postgresql-syntax.git
+[submodule "bundle/swift.vim"]
+	path = bundle/swift.vim
+	url = https://github.com/Keithbsmiley/swift.vim.git
