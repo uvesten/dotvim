@@ -12,7 +12,12 @@ set sw=2 sts=2 et
 " for javascript
 au FileType javascript setl sw=2 sts=2 et
 au FileType html setl sw=2 sts=2 et
+" for markdown
+au FileType markdown setl sw=4 sts=4 et
 
+"font on mac
+
+set guifont=Monaco:h16
 
 " Line numbers
 set number
