@@ -1,6 +1,7 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
 
 set autoindent
 set smartindent
@@ -13,11 +14,19 @@ set sw=2 sts=2 et
 au FileType javascript setl sw=2 sts=2 et
 au FileType html setl sw=2 sts=2 et
 " for markdown
-au FileType markdown setl sw=4 sts=4 et
+au FileType mkd setl sw=4 sts=4 et
+" Enable spellchecking for Markdown
+autocmd FileType mkd setlocal spell
+
+" some latex settings
+let g:tex_flavor = "latex"
+autocmd FileType tex setlocal spell spelllang=en_gb 
+let g:tex_comment_nospell= 1
+
 
 "font on mac
 
-set guifont=Monaco:h16
+set guifont=Monaco:h12
 
 " Line numbers
 set number
@@ -104,3 +113,19 @@ set wrapmargin=0
 " for postgres development
 autocmd FileType sql :let b:vimpipe_command="psql -U reservi"
 autocmd FileType sql :let b:vimpipe_filetype="postgresql"
+
+" Add support for markdown files in tagbar.
+let g:tagbar_type_mkd = {
+    \ 'ctagstype': 'mkd',
+    \ 'ctagsbin' : '/usr/local/bin/markdown2ctags.py',
+    \ 'ctagsargs' : '-f - --sort=yes',
+    \ 'kinds' : [
+        \ 's:sections',
+        \ 'i:images'
+    \ ],
+    \ 'sro' : '|',
+    \ 'kind2scope' : {
+        \ 's' : 'section',
+    \ },
+    \ 'sort': 0,
+\ }
