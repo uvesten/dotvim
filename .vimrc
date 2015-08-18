@@ -22,6 +22,11 @@ autocmd FileType mkd setlocal spell
 let g:tex_flavor = "latex"
 autocmd FileType tex setlocal spell spelllang=en_gb 
 let g:tex_comment_nospell= 1
+let g:LatexBox_viewer = "open -a Skim"
+"let g:LatexBox_latexmk_preview_continuously = 1
+let g:LatexBox_latexmk_options = "-synctex=1"
+:map <F4> :w !texcount -inc -incbib -sum -1 -<CR>
+
 
 
 "font on mac
