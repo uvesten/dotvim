@@ -31,7 +31,7 @@ let g:LatexBox_latexmk_options = "-synctex=1"
 
 "font on mac
 
-set guifont=Monaco:h12
+set guifont=Source\ Code\ Pro:h14
 
 " Line numbers
 set number
@@ -134,3 +134,8 @@ let g:tagbar_type_mkd = {
     \ },
     \ 'sort': 0,
 \ }
+
+" powerline init
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
