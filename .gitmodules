@@ -91,3 +91,6 @@
 [submodule "bundle/jedi-vim"]
 	path = bundle/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "bundle/nvim-r"]
+	path = bundle/nvim-r
+	url = https://github.com/jalvesaq/Nvim-R.git
