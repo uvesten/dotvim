@@ -91,3 +91,6 @@
 [submodule "bundle/jedi-vim"]
 	path = bundle/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "bundle/vim-bracketed-paste"]
+	path = bundle/vim-bracketed-paste
+	url = https://github.com/ConradIrwin/vim-bracketed-paste
