@@ -139,3 +139,9 @@ let g:tagbar_type_mkd = {
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
+
+" jedi-vim config
+" autopep8
+
+autocmd FileType python map <buffer> <F3> :call Autopep8()<CR>
+let g:autopep8_aggressive=1
