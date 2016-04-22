@@ -97,3 +97,9 @@
 [submodule "bundle/vim-autopep8"]
 	path = bundle/vim-autopep8
 	url = https://github.com/tell-k/vim-autopep8.git
+[submodule "bundle/scss-syntax"]
+	path = bundle/scss-syntax
+	url = https://github.com/cakebaker/scss-syntax.vim.git
+[submodule "bundle/css3-syntax"]
+	path = bundle/css3-syntax
+	url = https://github.com/hail2u/vim-css3-syntax.git
