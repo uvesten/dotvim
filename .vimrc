@@ -153,3 +153,8 @@ nmap <Space> <Plug>RDSendLine
 let R_in_buffer = 0
 "let R_applescript = 0
 let R_tmux_split = 1
+" jedi-vim config
+" autopep8
+
+autocmd FileType python map <buffer> <F3> :call Autopep8()<CR>
+let g:autopep8_aggressive=1
