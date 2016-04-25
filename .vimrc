@@ -139,3 +139,17 @@ let g:tagbar_type_mkd = {
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
+
+"------------------------------------
+" Nvim-R
+"------------------------------------
+if has("gui_running")
+    inoremap <C-Space> <C-x><C-o>
+else
+    inoremap <Nul> <C-x><C-o>
+endif
+vmap <Space> <Plug>RDSendSelection
+nmap <Space> <Plug>RDSendLine
+let R_in_buffer = 0
+"let R_applescript = 0
+let R_tmux_split = 1
