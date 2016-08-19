@@ -100,6 +100,9 @@ autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bu
 " dont fold markdown
 let g:vim_markdown_folding_disabled=1
 
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+let g:syntastic_javascript_checkers = ['eslint']
+
 " word wrap. 
 set wrap
 set linebreak
