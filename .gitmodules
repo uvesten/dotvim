@@ -1,9 +1,0 @@
-[submodule "bundle/vim-jsbeautify"]
-	path = bundle/vim-jsbeautify
-	url = https://github.com/maksimr/vim-jsbeautify.git
-[submodule "bundle/vim-ruby"]
-	path = bundle/vim-ruby
-	url = https://github.com/vim-ruby/vim-ruby.git
-[submodule "bundle/vim-jsx"]
-	path = bundle/vim-jsx
-	url = https://github.com/mxw/vim-jsx.git
