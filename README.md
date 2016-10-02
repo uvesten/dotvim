@@ -1,4 +1,5 @@
-These are my Vim settings.
+These are my Vim settings, version 2, using Plug instead of Pathogen. 
+(Got bored with the git submodules)
 
 
 To install, do
@@ -6,20 +7,19 @@ To install, do
     cd
     git clone https://github.com/uvesten/dotvim .vim
     cd .vim
-    git submodule init
-    git submodule update
-    cd bundle/vim-jsbeautify && git submodule update --init --recursive
+    ./install.sh
     cd ..
     ln -s .vim/.vimrc
-    ln -s .vim/.eslintrc
 
 ## Ubuntu 16.04 extras
 sudo apt-get install silversearcher-ag
-sudo apt-get install powerline python3-powerline
 sudo apt-get install python-autopep8
+
 
 ## For javascript
 
 npm install -g eslint
 npm install -g babel-eslint
+
+## For react
 npm install -g eslint-plugin-react

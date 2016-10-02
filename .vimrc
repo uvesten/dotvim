@@ -1,4 +1,10 @@
-execute pathogen#infect()
+" Allow incompatibilities with vim
+set nocompatible
+
+" Use the plug file
+
+source $HOME/.vim/plug.vim
+
 syntax on
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
@@ -11,8 +17,8 @@ set gcr=a:blinkon0
 " 2 spaces = tab
 set sw=2 sts=2 et
 " for javascript
-au FileType javascript setl sw=2 sts=2 et
-au FileType html setl sw=2 sts=2 et
+au FileType javascript setl sw=4 ts=4 noexpandtab
+au FileType html setl sw=4 ts=4 noexpandtab
 " for markdown
 au FileType mkd setl sw=4 sts=4 et
 " Enable spellchecking for Markdown
@@ -85,9 +91,6 @@ let g:NERDTreeDirArrows=0
 nmap <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-" For vim-slime, testing to use tmux instead of screen. 
-let g:slime_target = "tmux"
-
 " jshint2 integration
 nnoremap <silent><F3> :JSHint<CR>
 inoremap <silent><F3> <C-O>:JSHint<CR>
@@ -138,10 +141,10 @@ let g:tagbar_type_mkd = {
     \ 'sort': 0,
 \ }
 
-" powerline init
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
+" vim-airline settings
+"
+let g:airline_powerline_fonts = 1
+set laststatus=2
 
 " jedi-vim config
 " autopep8
@@ -163,3 +166,5 @@ endif
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+set clipboard=unnamed
