@@ -17,7 +17,7 @@ set gcr=a:blinkon0
 " 2 spaces = tab
 set sw=2 sts=2 et
 " for javascript
-au FileType javascript setl sw=4 ts=4 noexpandtab
+au FileType javascript setl sw=4 ts=4 noexpandtab foldmethod=syntax
 au FileType html setl sw=4 ts=4 noexpandtab
 " for markdown
 au FileType mkd setl sw=4 sts=4 et
@@ -45,17 +45,19 @@ set number
 " Enable mouse in terminal
 set mouse=a
 
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
+"let g:solarized_contrast="high"
+"let g:solarized_visibility="high"
 
 " Choose colorscheme based on GUI. 
-if has('gui_running')
-    set background=light
-else
-set background=dark
-endif
+"if has('gui_running')
+"    set background=light
+"else
+"set background=dark
+"endif
 
-colorscheme solarized
+colorscheme lucius
+LuciusWhite
+colorscheme molokai-dark
 
 " Some special filetypes
 augroup filetypedetect 
@@ -98,7 +100,6 @@ vnoremap <silent><F3> :JSHint<CR>
 
 "closetag for html editing etc. 
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
-autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
 
 " dont fold markdown
 let g:vim_markdown_folding_disabled=1

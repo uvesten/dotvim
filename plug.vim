@@ -17,7 +17,11 @@ Plug 'airblade/vim-gitgutter'
 
 " Colors
 
+Plug 'pR0Ps/molokai-dark'
+Plug 'jonathanfilip/vim-lucius'
 Plug 'altercation/vim-colors-solarized'
+Plug 'tomasr/molokai'
+
 
 " Linting
 Plug 'scrooloose/syntastic'
@@ -41,6 +45,11 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' } 
+
+" Html etc
+
+Plug 'Slava/vim-spacebars'
+Plug 'alvan/vim-closetag'
 
 " Latex
 
