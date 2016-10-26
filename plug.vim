@@ -74,6 +74,7 @@ Plug 'Chun-Yang/vim-action-ag'
 
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
 
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
