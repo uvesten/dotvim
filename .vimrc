@@ -148,10 +148,10 @@ let g:airline_powerline_fonts = 1
 set laststatus=2
 
 " jedi-vim config
-" autopep8
+" python
+"
+let g:syntastic_python_checkers = ['flake8'] " will use flake8 as checker
 
-autocmd FileType python map <buffer> <F3> :call Autopep8()<CR>
-let g:autopep8_aggressive=1
 
 " The Silver Searcher
 if executable('ag')
