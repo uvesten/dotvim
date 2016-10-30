@@ -30,7 +30,7 @@ Plug 'scrooloose/syntastic'
 "
 " Python 3
 Plug 'davidhalter/jedi-vim'
-Plug 'nvie/vim-flake8'
+Plug 'andviro/flake8-vim'
 " md
 
 Plug 'plasticboy/vim-markdown'
