@@ -9,6 +9,9 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+" c & c++ style completion
+"Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --system-libclang'} 
+
 " git
 
 
@@ -25,6 +28,7 @@ Plug 'tomasr/molokai'
 
 " Linting
 Plug 'scrooloose/syntastic'
+Plug 'mtscout6/syntastic-local-eslint.vim'
 
 " Syntax
 "
@@ -34,6 +38,7 @@ Plug 'nvie/vim-flake8'
 " md
 
 Plug 'plasticboy/vim-markdown'
+
 
 " Css3, sccss, less
 
@@ -81,6 +86,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Look
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 filetype plugin indent on                   " required!
 call plug#end()

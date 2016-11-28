@@ -17,8 +17,9 @@ set gcr=a:blinkon0
 " 2 spaces = tab
 set sw=2 sts=2 et
 " for javascript
-au FileType javascript setl sw=4 ts=4 noexpandtab foldmethod=syntax
-au FileType html setl sw=4 ts=4 noexpandtab
+au FileType javascript setl sw=2 ts=2 et
+"au FileType javascript setl sw=2 ts=2 et foldmethod=syntax
+au FileType html setl sw=2 ts=2 et
 " for markdown
 au FileType mkd setl sw=4 sts=4 et
 " Enable spellchecking for Markdown
