@@ -34,7 +34,7 @@ Plug 'mtscout6/syntastic-local-eslint.vim'
 "
 " Python 3
 Plug 'davidhalter/jedi-vim'
-Plug 'nvie/vim-flake8'
+Plug 'tell-k/vim-autopep8'
 " md
 
 Plug 'plasticboy/vim-markdown'
