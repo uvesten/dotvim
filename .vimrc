@@ -34,7 +34,12 @@ let g:LatexBox_viewer = "open -a Skim"
 let g:LatexBox_latexmk_options = "-synctex=1"
 :map <F4> :w !texcount -inc -incbib -sum -1 -<CR>
 
-
+" mouse support for more than 220 cols
+if has("mouse_sgr")
+  set ttymouse=sgr
+else
+  set ttymouse=xterm2
+end
 
 "font on mac
 
