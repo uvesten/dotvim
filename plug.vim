@@ -86,6 +86,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Look
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'enricobacis/vim-airline-clock'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
