@@ -23,11 +23,13 @@ au FileType html setl sw=2 ts=2 et
 " for markdown
 au FileType mkd setl sw=4 sts=4 et
 " Enable spellchecking for Markdown
-autocmd FileType mkd setlocal spell
 
 " some latex settings
 let g:tex_flavor = "latex"
-autocmd FileType tex setlocal spell spelllang=en_gb 
+
+" spell check for common text formats
+autocmd FileType latex,tex,md,markdown,mkd,text  setlocal spell spelllang=en_us 
+
 let g:tex_comment_nospell= 1
 let g:LatexBox_viewer = "open -a Skim"
 "let g:LatexBox_latexmk_preview_continuously = 1
@@ -93,7 +95,7 @@ command Nvm !node %
 let maplocalleader = ";"
 let mapleader = ","
 
-nmap <F8> :TagbarToggle<CR>
+nmap <F6> :TagbarToggle<CR>
 
 let g:NERDTreeDirArrows=0
 nmap <F2> :NERDTreeToggle<CR>

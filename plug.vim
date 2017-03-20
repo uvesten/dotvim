@@ -65,6 +65,10 @@ Plug 'LaTeX-Box-Team/LaTeX-Box'
 
 Plug 'ervandew/supertab'
 
+" Docker
+
+Plug 'ekalinin/Dockerfile.vim'
+
 " Misc niceties for vim
 
 Plug 'tpope/vim-commentary'
