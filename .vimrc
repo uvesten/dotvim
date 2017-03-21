@@ -159,6 +159,8 @@ set laststatus=2
 " python
 "
 let g:syntastic_python_checkers = ['flake8'] " will use flake8 as checker
+" map autopep8 to <F8>
+autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
 
 
 " The Silver Searcher
