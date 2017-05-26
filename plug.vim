@@ -36,8 +36,15 @@ Plug 'mtscout6/syntastic-local-eslint.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'tell-k/vim-autopep8'
 " md
+"
+
+" Go
+Plug 'fatih/vim-go'
 
 Plug 'plasticboy/vim-markdown'
+
+" swift
+Plug 'keith/swift.vim'
 
 
 " Css3, sccss, less

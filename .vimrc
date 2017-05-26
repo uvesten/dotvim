@@ -179,3 +179,12 @@ endif
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 set clipboard=unnamed
+
+
+" swift 
+let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
+
+" YAPF 
+
+map <C-Y> :call yapf#YAPF()<cr>
+imap <C-Y> <c-o>:call yapf#YAPF()<cr>
