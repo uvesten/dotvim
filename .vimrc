@@ -43,6 +43,8 @@ else
   set ttymouse=xterm2
 end
 
+" fix backspace for american laptop
+set backspace=indent,eol,start
 "font on mac
 
 set guifont=Source\ Code\ Pro:h14
