@@ -57,6 +57,7 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' } 
+Plug 'nikvdp/ejs-syntax'
 
 " Html etc
 

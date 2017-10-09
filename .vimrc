@@ -84,6 +84,8 @@ autocmd FileType handlebars noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
+" default fold json
+autocmd FileType json setlocal foldmethod=syntax
 
 " for html indent. vim-javascript fscks something up otherwise.
 let g:html_indent_inctags = "html,body,head,tbody"
@@ -99,9 +101,11 @@ let mapleader = ","
 
 nmap <F6> :TagbarToggle<CR>
 
+" NERDTree settings
 let g:NERDTreeDirArrows=0
 nmap <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 
 " jshint2 integration
 nnoremap <silent><F3> :JSHint<CR>
