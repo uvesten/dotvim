@@ -79,6 +79,10 @@ Plug 'ekalinin/Dockerfile.vim'
 
 " Misc niceties for vim
 
+" REPL
+
+Plug 'jpalardy/vim-slime'
+
 Plug 'tpope/vim-commentary'
 Plug 'bkad/CamelCaseMotion'
 Plug 'ctrlpvim/ctrlp.vim'

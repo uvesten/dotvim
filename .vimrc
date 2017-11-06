@@ -181,6 +181,10 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+" slime + tmux
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": split($TMUX, ",")[0], "target_pane": ":.2"}
+
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
