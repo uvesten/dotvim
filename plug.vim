@@ -69,6 +69,11 @@ Plug 'alvan/vim-closetag'
 Plug 'LaTeX-Box-Team/LaTeX-Box'
 
 
+" Rust
+
+Plug 'rust-lang/rust.vim'
+Plug 'cespare/vim-toml'
+
 " Tab completion
 
 Plug 'ervandew/supertab'
@@ -105,6 +110,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'enricobacis/vim-airline-clock'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'Xuyuanp/nerdtree-git-plugin'        " NERD Tree git flags
+Plug 'ryanoasis/vim-devicons'             " Devicon glyphs
 
 filetype plugin indent on                   " required!
 call plug#end()
