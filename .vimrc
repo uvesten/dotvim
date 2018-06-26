@@ -165,6 +165,7 @@ set laststatus=2
 " python
 "
 let g:syntastic_python_checkers = ['flake8'] " will use flake8 as checker
+let g:syntastic_python_flake8_args='--ignore=E501,E225'
 " map autopep8 to <F8>
 autocmd FileType python noremap <buffer> <F8> :call Autopep8()<CR>
 
@@ -198,3 +199,19 @@ let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
 
 map <C-Y> :call yapf#YAPF()<cr>
 imap <C-Y> <c-o>:call yapf#YAPF()<cr>
+" Snakemake
+au BufNewFile,BufRead Snakefile set syntax=snakemake
+au BufNewFile,BufRead *.smk set syntax=snakemake
+
+au FileType Snakefile setl sw=4 sts=4 et
+au FileType smk setl sw=4 sts=4 et
+
+" autopep8 config
+"let g:autopep8_ignore="E501"
+"let g:autopep8_max_line_length=88
+"
+" put swapfiles locally
+
+set undodir=/tmp
+set backupdir=/tmp
+set directory=/tmp

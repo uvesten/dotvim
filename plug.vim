@@ -15,8 +15,8 @@ call plug#begin('~/.vim/plugged')
 " git
 
 
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+"Plug 'tpope/vim-fugitive'
+"Plug 'airblade/vim-gitgutter'
 
 " Colors
 
@@ -35,6 +35,7 @@ Plug 'mtscout6/syntastic-local-eslint.vim'
 " Python 3
 Plug 'davidhalter/jedi-vim'
 Plug 'tell-k/vim-autopep8'
+Plug 'ambv/black'
 " md
 "
 
