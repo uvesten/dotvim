@@ -12,11 +12,10 @@ call plug#begin('~/.vim/plugged')
 " c & c++ style completion
 "Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --system-libclang'} 
 
+
 " git
-
-
-"Plug 'tpope/vim-fugitive'
-"Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " Colors
 
@@ -24,11 +23,14 @@ Plug 'pR0Ps/molokai-dark'
 Plug 'jonathanfilip/vim-lucius'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tomasr/molokai'
+Plug 'ErichDonGubler/vim-sublime-monokai'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 
 
 " Linting
-Plug 'scrooloose/syntastic'
-Plug 'mtscout6/syntastic-local-eslint.vim'
+Plug 'dense-analysis/ale'
 
 " Syntax
 "
@@ -37,7 +39,10 @@ Plug 'davidhalter/jedi-vim'
 Plug 'tell-k/vim-autopep8'
 Plug 'ambv/black'
 " md
-"
+
+" Rust
+Plug 'rust-lang/rust.vim'
+Plug 'cespare/vim-toml'
 
 " Go
 Plug 'fatih/vim-go'
@@ -47,6 +52,8 @@ Plug 'plasticboy/vim-markdown'
 " swift
 Plug 'keith/swift.vim'
 
+" haskell
+Plug 'neovimhaskell/haskell-vim'
 
 " Css3, sccss, less
 
@@ -57,8 +64,9 @@ Plug 'hail2u/vim-css3-syntax'
 
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' } 
-Plug 'nikvdp/ejs-syntax'
+"Plug 'mattn/emmet-vim'
+"Plug 'ternjs/tern_for_vim', { 'do': 'npm install' } 
+"Plug 'nikvdp/ejs-syntax'
 
 " Html etc
 
@@ -69,11 +77,13 @@ Plug 'alvan/vim-closetag'
 
 Plug 'LaTeX-Box-Team/LaTeX-Box'
 
+" R
+Plug 'jalvesaq/Nvim-R'
+"Plug 'chrisbra/csv.vim'
+"Plug 'vim-pandoc/vim-pandoc'
+"Plug 'vim-pandoc/vim-pandoc-syntax'
+"Plug 'vim-pandoc/vim-rmarkdown'
 
-" Rust
-
-Plug 'rust-lang/rust.vim'
-Plug 'cespare/vim-toml'
 
 " Tab completion
 

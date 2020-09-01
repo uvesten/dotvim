@@ -21,6 +21,7 @@ au FileType javascript setl sw=2 ts=2 et
 "au FileType javascript setl sw=2 ts=2 et foldmethod=syntax
 au FileType html setl sw=2 ts=2 et
 " for markdown
+au BufNewFile,BufRead *.Rmd set syntax=markdown
 au FileType mkd setl sw=4 sts=4 et
 " Enable spellchecking for Markdown
 
@@ -28,13 +29,19 @@ au FileType mkd setl sw=4 sts=4 et
 let g:tex_flavor = "latex"
 
 " spell check for common text formats
-autocmd FileType latex,tex,md,markdown,mkd,text  setlocal spell spelllang=en_us 
+autocmd FileType latex,tex,md,markdown,mkd,text,Rmd  setlocal spell spelllang=en_us 
+
+" line wrap when diffing
+map <F3> :windo set wrap <CR>
+
 
 let g:tex_comment_nospell= 1
 let g:LatexBox_viewer = "open -a Skim"
 "let g:LatexBox_latexmk_preview_continuously = 1
 let g:LatexBox_latexmk_options = "-synctex=1"
 :map <F4> :w !texcount -inc -incbib -sum -1 -<CR>
+autocmd FileType latex,tex  nnoremap <buffer><silent><leader>c :Latexmk<CR>
+autocmd FileType latex,tex  nnoremap <buffer><silent><leader>v :LatexView<CR>
 
 " mouse support for more than 220 cols
 if has("mouse_sgr")
@@ -65,9 +72,13 @@ set mouse=a
 "set background=dark
 "endif
 
-colorscheme lucius
-LuciusWhite
-colorscheme molokai-dark
+"colorscheme lucius
+"LuciusWhite
+"colorscheme molokai-dark
+set background=dark
+colorscheme papercolor
+
+"colorscheme gruvbox
 
 " Some special filetypes
 augroup filetypedetect 
@@ -77,7 +88,8 @@ augroup END
 
 let g:mustache_abbreviations = 1
 
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix % 
+"reformat js on save
 " for html
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType handlebars noremap <buffer> <c-f> :call HtmlBeautify()<cr>
@@ -96,8 +108,8 @@ let g:html_indent_style1 = "inc"
 command Nvm !node %
 
 " Map localleader and leader to something that works.
-let maplocalleader = ";"
-let mapleader = ","
+let maplocalleader = "\\"
+let mapleader = "'"
 
 nmap <F6> :TagbarToggle<CR>
 
@@ -107,19 +119,16 @@ nmap <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 
-" jshint2 integration
-nnoremap <silent><F3> :JSHint<CR>
-inoremap <silent><F3> <C-O>:JSHint<CR>
-vnoremap <silent><F3> :JSHint<CR>
 
 "closetag for html editing etc. 
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 
-" dont fold markdown
+" fold markdown
 let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_fenced_languages = ['{r=R']
 
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
-let g:syntastic_javascript_checkers = ['eslint']
+"let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+"let g:syntastic_javascript_checkers = ['eslint']
 
 " word wrap. 
 set wrap
@@ -215,3 +224,31 @@ au FileType smk setl sw=4 sts=4 et
 set undodir=/tmp
 set backupdir=/tmp
 set directory=/tmp
+
+" rustfmt on save
+let g:rustfmt_autosave = 1
+
+" ale / rust
+let g:ale_linters = {'rust': ['rls']}
+let g:ale_rust_rls_toolchain = 'stable'
+let g:ale_completion_enabled = 1
+
+" for R
+let R_csv_app = 'excel.sh'
+let R_csv_delim = ';'
+let R_assign=2
+
+" syntax highlighting
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
+
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
